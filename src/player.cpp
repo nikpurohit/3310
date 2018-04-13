@@ -282,7 +282,7 @@ cout<< "Dealer's Hand:\n";
               int dealer_points = Hand_Value ( m_G.dealer_cards ); cout<< "Player's cards: \n";
               int player_points = Hand_Value ( m_G.p[m_G.active_player].cards );
               std::cout << "Dealer has " << dealer_points << " Player has " << player_points << std::endl;
-              if ( dealer_points > 21 || ( (player_points > dealer_points) && (player_points < 21) ) )
+              if ( dealer_points > 21 || ( (player_points > dealer_points) && (player_points < 21) ) || ( (player_points == 21) && (dealer_points != 21) ) )
               {
                  std::cout << "Player Wins" << std::endl;
                  m_balance = m_balance + 10.0;
